@@ -9,7 +9,7 @@ To run this chatbot:
         - Python=="version:3.8" or higher
 
     - First time running:
-        - conda create --name NAME python==3.8 #Using anaconda to create a new virtual environment with python=="version:3.8"
+        - conda create -n NAME python==3.8 #Using anaconda to create a new virtual environment with python=="version:3.8"
                                                #Replace NAME to the name of the virtual environment
         - conda activate NAME                  #Activate the virtual environment
 
@@ -24,7 +24,7 @@ To run this chatbot:
         #Remember using these above commands in "Command Promt" Terminal which allows you to access to your virtual environment.
 
     - To run the chatbot: #Here you need to open at least 2 "Command Promt" Terminal which have access to the virtual environment.      
-        - rasa run action -v    #Run this command in the first terminal and keep this running
+        - rasa run actions -v    #Run this command in the first terminal and keep this running
         Now comeback to the first terminal then running:
         - rasa shell            #Run the project. Now you can play "Rock,Paper,Scissors" with this chatbot. #Type 'rock'.
         
