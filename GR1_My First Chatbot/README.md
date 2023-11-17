@@ -2,7 +2,9 @@
 
 To run this chatbot:
     - Requirement: 
+    
         - Anaconda
+        
         - Python=="version:3.8" or higher
 
     - First time running:
