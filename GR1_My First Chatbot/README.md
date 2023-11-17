@@ -17,15 +17,16 @@ To run this chatbot:
         - python -m ensurepip
         - python -m pip install -U pip         #Re-install pip 
         - pip install rasa                     #Install RASA using pip, here we must use RASA 3.0
-    #You can also using "rasa --version" command to check if RASA is available or not.
-    #Check if there is any issue with your RASA the issue usually comes from your "SQLALchemy", your "Sanic" Framework.
-    #Remember using these above commands in "Command Promt" Terminal which allows you to access to your virtual environment.
 
-    - To run the chatbot: #Here you need to open at least 2 "Command Promt" Terminal which have access to the virtual environment.
-        - rasa train            #Run this command in the first terminal.
-        - rasa run action -v    #Run this command in the second terminal and keep this running
+        - rasa train                           #Train the chatbot  
+        #You can also using "rasa --version" command to check if RASA is available or not.
+        #Check if there is any issue with your RASA. The issue usually comes from your "SQLALchemy", your "Sanic" Framework.
+        #Remember using these above commands in "Command Promt" Terminal which allows you to access to your virtual environment.
+
+    - To run the chatbot: #Here you need to open at least 2 "Command Promt" Terminal which have access to the virtual environment.      
+        - rasa run action -v    #Run this command in the first terminal and keep this running
         Now comeback to the first terminal then running:
-        - rasa shell            #Run the project, communicate to the chatbot.
+        - rasa shell            #Run the project. Now you can play "Rock,Paper,Scissors" with this chatbot. #Type 'rock'.
         
 
 
