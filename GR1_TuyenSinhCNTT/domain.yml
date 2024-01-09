@@ -1,0 +1,335 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_about_general
+  - ask_about_IT1
+  - ask_about_IT2
+  - ask_about_ITe7
+  - ask_about_ITe6
+  - ask_about_ITe10
+  - ask_about_ITe15
+  - compare_it1_it2
+  - compare_ite6_ite7
+  - D07_co_CNTT_ko
+  - CTDT_trien_vong
+  - giang_vien_nuoc_ngoai
+  - con_gai_cntt
+  - yeu_cau_ngoai_ngu
+  - so_sanh_cttt
+  - lap_trinh
+  - layoff
+  - GPT_AI
+
+entities:
+  - nganh_it1
+  - nganh_it2
+  - nganh_e7
+  - nganh_e6
+  - nganh_e10
+  - nganh_e15
+# slots:
+#   ngành_it1:
+#     type: categorical
+#     values:
+#       - Khoa Học Máy Tính
+#       - IT1
+#       - Computer Science
+#       - Khoa học máy tính IT1
+#     mappings:
+#     - type: from_entity
+#     - entity: ngành_it1
+#   ngành_it2:
+#     type: categorical
+#     values:
+#       - kỹ thuật máy tính
+#       - it2
+#       - kỹ thuật máy tính IT2
+#       - computer engineering
+#       - ngành IT2
+#     mappings:
+#     - type: from_entity
+#     - entity: ngành_it2
+#   ngành_ite7:
+#     type: categorical
+#     values:
+#       - it-e7
+#       - Global Ict
+#       - công nghệ thông tin học bằng tiếng anh
+#       - ict
+#       - ite7
+#     mappings:
+#     - type: from_entity
+#     - entity: ngành_ite7
+#   ngành_ite6:
+#     type: categorical
+#     values:
+#       - it-e6
+#       - công nghệ thông tin Việt Nhật
+#       - Việt Nhật
+#       - học bằng tiếng Nhật
+#       - hedspi
+#       - ite6
+#     mappings:
+#     - type: from_entity
+#     - entity: ngành_ite6
+#   ngành_ite10:
+#     type: categorical
+#     values:
+#       - it-e10
+#       - chương trình tiên tiến it-e10
+#       - công nghệ thông tin AI
+#       - công nghệ thông tin học trí tuệ nhân tạo
+#       - AI
+#       - Trí tuệ nhân tạo
+#       - Khoa học dữ liệu
+#       - Khoa học dữ liệu và trí tuệ nhân tạo
+#       - DS_AI
+#     mappings:
+#     - type: from_entity
+#     - entity: ngành_ite10
+#   ngành_ite15:
+#     type: categorical
+#     values:
+#       - it-e15
+#       - chương trình tiên tiến it-e15
+#       - công nghệ thông tin học về an toàn thông tin
+#       - an toàn thông tin
+#       - cyber security
+#       - an toàn không gian số
+#       - ite15
+#       - security
+#       - cyber
+#     mappings:
+#     - type: from_entity
+#     - entity: ngành_ite15
+
+responses:
+  utter_greet:
+  - text: "Xin chào tôi là chatbot tư vấn tuyển sinh các ngành về khối Công nghệ thông tin của Đại học Bách khoa Hà Nội. Tôi rất sẵn lòng trả lời câu hỏi, thắc mắc của bạn về vấn đề này."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Tạm biệt. Mong rằng bạn đã có câu trả lời mong muốn của mình."
+
+  utter_iamabot:
+  - text: "Tôi là chatbot tư vấn tuyển sinh các ngành về khối Công nghệ thông tin của Đại học Bách khoa Hà Nội. Tôi rất sẵn lòng trả lời câu hỏi, thắc mắc của bạn về vấn đề này."
+
+  utter_ask_about_general:
+  - text: "Trong lĩnh vực công nghệ thông tin của ĐHBK Hà Nội,Trường ĐHBK Hà Nội có tổng cộng 6 mã xét tuyển ngành CNTT, gồm có:\n
+- (IT1) CNTT Khoa học máy tính\n
+- (IT2) CNTT Kỹ thuật máy tính\n
+- (IT-E6) Công nghệ thông tin Việt-Nhật\n
+- (IT-E7) Công nghệ thông tin Global ICT\n
+- (IT-E10) Chương trình tiên tiến Khoa học Dữ liệu và Trí tuệ nhân tạo (Data Science and AI)\n
+- (IT-E15) Chương trình tiên tiến An toàn không gian số Cyber Security\n
+Bạn muốn biết thêm thông tin về ngành nào trong những ngành trên?"
+
+  utter_ask_about_IT1:
+  - text: "KHOA HỌC MÁY TÍNH(IT1) là ngành đào tạo truyền thống, có uy tín lâu năm, và có triển vọng nghề nghiệp mở rộng nhất trong số các ngành đào tạo liên quan đến CNTT tại ĐHBK Hà Nôi. Sinh viên theo ngành đào tạo có thể trở thành chuyên gia phát triển phần mềm, chuyên gia phát triển các hệ thống thông tin, chuyên gia thiết kế và phát triển giải pháp CNTT.\n
+Ngôn ngữ đào tạo: Tiếng Việt\n
+Mã xét tuyển: IT1\n
+Phương thức xét tuyển:\n
+- Xét tuyển tài năng:Xét tuyển bằng Giải thưởng HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+- Xét tuyển theo KQ Kỳ thi ĐGTD:\n
+  + Tổ hợp xét tuyển: K00\n
+      Điểm chuẩn: 83.90\n
+- Xét tuyển theo KQ Kỳ thi TN THPT:\n
+  + Tổ hợp xét tuyển: A00 A01\n
+      Điểm chuẩn: 29.42\n
+Chỉ tiêu tuyển sinh: 300 (năm 2023),\n
+Trường Công nghệ thông tin và Truyền thông\n
+Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp\n
+Thời gian tuyển sinh: Tháng 8 hàng năm\n
+Thời gian đào tạo: 4 - 5,5 năm\n
+Học phí: 22 - 28 triệu đồng/năm\n
+Công nghệ thông tin - Khoa học máy tính (với các định hướng: Công nghệ phần mềm và Hệ thống thông tin) Là ngành đào tạo truyền thống, có uy tín lâu năm, và có triển vọng nghệ nghiệp mở rộng nhất trong số các ngành đào tạo liên quan đến CNTT tại ĐHBK Hà Nôi. Sinh viên theo ngành đào tạo có thể trở thành chuyên gia phát triển phần mềm, chuyên gia phát triển các hệ thống thông tin, và chuyên gia thiết kế và phát triển giải pháp CNTT.\n
+Ngành đào tạo\n
+Đào tạo nhân lực chất lượng cao cho ngành Khoa học Máy tính theo một trong hai định hướng: Công nghệ Phần mềm và Hệ thống Thông tin. Sinh viên sau khi tốt nghiệp có kiến thức cốt lõi ngành, có khả năng vận dụng kiến thức chuyên sâu để phân tích thiết kế, xây dựng và phát triển các giải pháp phần mềm, cũng như các hệ thống thông tin thông minh.\n"
+
+  utter_ask_about_IT2:
+  - text: "KỸ THUẬT MÁY TÍNH (IT2) là ngành học quan trọng, độc đáo, và duy nhất trong lĩnh vực CNTT tại ĐHBK HN cung cấp cho người học kiến thức chuyên môn cả về phần cứng, phần mềm và các kỹ thuật thiết kế và tích hợp tối ưu giữa phần cứng và phần mềm. Với các kiến thức được học, người học có khả năng trở thành chuyên gia về mạng máy tính, an toàn bảo mật hệ thống, cũng như chuyên gia thiết kế, chế tạo các hệ thống thiết bị thông minh, như: smart phone, các hệ thống IoT thông minh, các thiết bị smart home, và các giải pháp smart city \n
+ Ngôn ngữ đào tạo: Tiếng Việt\n
+Mã xét tuyển: IT2\n
+Phương thức xét tuyển:\n
+- Xét tuyển tài năng:Xét tuyển bằng Giải thưởng HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+- Xét tuyển theo KQ Kỳ thi ĐGTD:\n
+  + Tổ hợp xét tuyển: K00\n
+     Điểm chuẩn:79.22\n
+- Xét tuyển theo KQ Kỳ thi TN THPT:\n
+  + Tổ hợp xét tuyển: A00 A01
+     Điểm chuẩn:28.29\n
+Chỉ tiêu tuyển sinh:200(năm 2023)\n
+Trường Công nghệ thông tin và Truyền thông\n
+Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp\n
+Thời gian tuyển sinh: Tháng 8 hàng năm\n
+Thời gian đào tạo: 4 - 5,5 năm\n
+Học phí: 22 - 28 triệu đồng / năm\n
+Công nghệ thông tin - Kỹ thuật máy tính (các lĩnh vực: Mạng máy tính và Truyền thông dữ liệu; An toàn thông tin; Máy tính và Hệ thống nhúng):\n
+Ngành đào tạo:\n
+Đào tạo nhân lực chất lượng cao trong lĩnh vực Kỹ thuật máy tính. Người học được đào tạo kiến thức cơ bản về toán, kỹ thuật điện tử, giải thuật, cơ sở dữ liệu, phân tích và thiết kế hệ thống thông tin, kết hợp với kiến thức chuyên ngành về hệ thống máy tính, truyền thông dữ liệu, hệ thống nhúng, IoT, và an toàn an ninh thông tin.
+\n
+Sinh viên tốt nghiệp chuyên ngành Kỹ thuật máy tính có kỹ năng phát triển toàn diện một giải pháp hoàn chỉnh cả phần cứng và phần mềm, đặc biệt chú trọng đến khả năng tích hợp tối ưu giữa phần cứng và phần mềm trong một hệ thống."
+
+  utter_ask_about_ITe7:
+  - text: "(GLOBAL ICT) CHƯƠNG TRÌNH ĐÀO TẠO TOÀN CẦU VỀ CNTT BẰNG TIẾNG ANH là chương trình tiên tiến và có tính quốc tế hóa nhất trong các ngành đào tạo Công nghệ thông tin tại ĐHBK Hà Nôi. 100% môn học được dạy và học bằng Tiếng Anh, với sự tham gia của giảng viên và sinh viên quốc tế. Sinh viên ra trường có định hướng việc làm tại thị trường lao động quốc tế. Ngoài ra, sinh viên có cơ hội lớn tham gia vào các chương trình trao đổi sinh viên, chuyển tiếp với các đại học hàng đầu Thế giới.\n
+Ngôn ngữ đào tạo: Tiếng Anh\n
+Mã xét tuyển: IT-E7\n
+Phương thức xét tuyển:
+- Xét tuyển tài năng:Xét tuyển bằng Giải thưởng HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+- Xét tuyển theo KQ Kỳ thi ĐGTD:\n
+  + Tổ hợp xét tuyển: K00 (Bài thi đánh giá tư duy)\n
+     Điểm chuẩn: 79.12\n
+- Xét tuyển theo KQ Kỳ thi TN THPT:\n
+  + Tổ hợp xét tuyển:A01, A00\n
+     Điểm chuẩn:28.16\n
+Chỉ tiêu tuyển sinh: 100 (năm 2023)\n
+Trường Công nghệ thông tin và Truyền thông\n
+Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp\n
+Thời gian tuyển sinh: Tháng 4 - 8 hàng năm\n
+Thời gian đào tạo: 4 - 5,5 năm\n
+Học phí: 40 - 45 triệu đồng/năm 
+Thí sinh có thể vào các trang thông tin sau để trao đổi, giao lưu và xin thêm ý kiến của các sinh viên khóa trước của Chương trình:\n
+- Facebook page của Chương trình: https://www.facebook.com/GlobalICTBachKhoa/\n
+- Facebook group của sinh viên các thế hệ: https://www.facebook.com/groups/promo.ict.hust"
+
+  utter_ask_about_ITe6:
+  - text: "CÔNG NGHỆ THÔNG TIN VIỆT NHẬT (HEDSPI) là chương trình mà sinh viên ra Trường có mức lương trung bình cao nhất trong các ngành đào tạo liên quan đến CNTT của ĐHBK Hà Nội. 70% sinh viên tốt nghiệp sang làm việc tại Nhật Bản, và hiện tại, CNTT Việt Nhật (HEDSPI) đã trở thành một thương hiệu rất uy tín tại thị trường lao động Nhật Bản.\n
+ Ngôn ngữ đào tạo: Tiếng Nhật tăng cường\n
+Mã xét tuyển: IT-E6\n
+Phương thức xét tuyển:\n
+- Xét tuyển tài năng: -Xét tuyển bằng Giải thưởng HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+- Xét tuyển theo KQ Kỳ thi ĐGTD:\n
+  + Tổ hợp xét tuyển: K00\n
+     Điểm chuẩn: 72.03\n
+- Xét tuyển theo KQ Kỳ thi TN THPT:\n
+  +Tổ hợp xét tuyển: A00 A01 D28\n
+     Điểm chuẩn: 27.64\n
+Chỉ tiêu tuyển sinh: 240(năm 2023)\n
+Trường Công nghệ thông tin và Truyền thông\n
+Tốt nghiệp: Cử nhân - Thạc sĩ tích hợp\n
+Thời gian tuyển sinh: Tháng 8 hàng năm\n
+Thời gian đào tạo: 4 - 5,5 năm\n
+Học phí: 40 - 45 triệu đồng/năm\n
+CHƯƠNG TRÌNH ĐÀO TẠO ELITECH\n
+Trong khuôn khổ Dự án Hỗ trợ Phát triển Đào tạo Đại học và Sau Đại học về CNTT&TT (Dự án HEDSPI) hợp tác giữa Chính phủ hai nước Việt Nam và Nhật Bản, vào năm 2006, ĐHBK Hà Nội mở Chương trình kỹ sư CNTT Việt Nhật (gọi tắt là: Chương trình CNTT HEDSPI) đào tạo các kỹ sư CNTT có trình độ tương đương với các kỹ sư được đào tạo tại các trường đại học CNTT tại Nhật Bản. Từ năm 2021, chương trình kỹ sư CNTT Việt Nhật chuyển sang mô hình đào tạo tích hợp. Sinh viên sau khi tốt nghiệp cử nhân có thể tốt nghiệp lấy bằng cử nhân, hoặc học chuyển tiếp lên hệ kỹ sư và thạc sỹ.\n
+Sau khi tốt nghiệp, các cử nhân CNTT HEDSPI có thể được tuyển dụng sang Nhật Bản làm việc ngay với vị trí công việc và mức thu nhập tương đương các cử nhân CNTT Nhật Bản. Riêng về ngoại ngữ Tiếng Nhật, trong quá trình học sinh viên được học trực tiếp từ giảng viên người Nhật, thêm vào đó, nhiều môn chuyên ngành cũng được giảng dạy bởi các giáo sư và chuyên gia Nhật Bản đến từ các trường đại học và doanh nghiệp uy tín, điều này đảm bảo sinh viên có trình độ ngoại ngữ đủ để làm việc tại Nhật Bản."
+
+  utter_ask_about_ITe10:
+  - text: "Chương trình tiên tiến Khoa học Dữ liệu và Trí tuệ Nhân tạo (Data Science and AI): Là chương trình mới đầu tiên tại VN ở bậc ĐH  đáp ứng nhu cầu nhân lực trong một ngành là trụ cột của Công nghiệp 4.0 \n
+  
+   Khoa học Dữ liệu và Trí tuệ Nhân tạo. Chương trình được thiết kế và giảng dạy bởi các giáo sư hàng đầu trong nước và quốc tế, 100% môn học được dạy bằng Tiếng Anh, với thời lượng thực hành và thực tập tại doanh nghiệp lớn nhằm đào tạo ra các nhà khoa học dữ liệu chất lượng cao, sẵn sàng cho đòi hỏi nhân lực của Công nghiệp 4.0 tại Việt Nam và trên Thế giới.\n
+ Ngôn ngữ đào tạo: Tiếng Anh\n
+Mã xét tuyển: IT-E10\n
+Phương thức xét tuyển:\n
+- Xét tuyển tài năng: -Xét tuyển bằng Giải thưởng HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+- Xét tuyển theo KQ Kỳ thi ĐGTD:\n
+  + Tổ hợp xét tuyển: K00\n
+     Điểm chuẩn: 83.97\n
+- Xét tuyển theo KQ Kỳ thi TN THPT:\n
+  + Tổ hợp xét tuyển: A00 A01\n
+     Điểm chuẩn: 28.8\n
+Chỉ tiêu tuyển sinh: 100(năm 2023)\n
+Trường Công nghệ thông tin và Truyền thông\n
+Tốt nghiệp: Cử nhân - Thạc sĩ\n
+Thời gian tuyển sinh: Tháng 4 - 8 hàng năm\n
+Thời gian đào tạo: 4 - 6 năm\n
+Học phí: 50 - 60 triệu đồng/năm"
+
+  utter_ask_about_ITe15:
+  - text: "An toàn không gian số (Chương trình tiên tiến) (IT-E15) là chương trình mới  đầu tiên tại Việt Nam ở bậc Đại học  định hướng đào tạo chuyên gia trong lĩnh vực An toàn Không gian số. Chương trình được thiết kế bởi các giáo sư hàng đầu trong nước và quốc tế, có sự phối hợp với những tập đoàn công nghệ lớn như Bkav, IBM. 100% môn học được dạy bằng Tiếng Anh, với hệ thống bài thí nghiệm và thực hành theo tiêu chuẩn quốc tế nhằm đào tạo ra các chuyên gia trình độ cao, đáp ứng nhu cầu nhân lực của Công nghiệp 4.0 và Chiến lược Chuyển đổi số Quốc gia.\n
+ Ngôn ngữ đào tạo: Tiếng Anh\n
+Mã xét tuyển: IT-E15\n
+Phương thức xét tuyển:\n
+- Xét tuyển tài năng: Xét tuyển bằng Giải thưởng HSG QG-QT/Chứng chỉ Quốc tế/HSNL\n
+- Xét tuyển theo KQ Kỳ thi ĐGTD:\n
+  + Tổ hợp xét tuyển: K00\n
+     Điểm chuẩn: 76.61\n
+- Xét tuyển theo KQ Kỳ thi TN THPT:\n
+  + Tổ hợp xét tuyển: A00 A01\n
+     Điểm chuẩn: 28.05\n
+Chỉ tiêu tuyển sinh: 40(năm 2023)\n
+Trường Công nghệ thông tin và Truyền thông\n
+Tốt nghiệp: Cử nhân\n
+Thời gian tuyển sinh: Tháng 4 - 8 hàng năm\n
+Thời gian đào tạo: Cử nhân (4 năm) - Kỹ sư (5,5 năm), Thạc sĩ (5,5 năm)\n
+Học phí: 40 - 45 triệu đồng/năm\n
+Chương trình có mục đích đào tạo các chuyên gia trình độ cao về An toàn Không gian số (Cyber Security). Chương trình được các chuyên gia hàng đầu trong lĩnh vực của Việt Nam và trên Thế giới thiết kế. Với định hướng đào tạo chuyên gia, sinh viên tham gia chương trình được trang bị đầy đủ kiến thức hàn lâm, song song với việc được chú trọng gia tăng thời lượng thực hành, cũng như học thông qua trải nghiệm tại hệ thống các phòng lab nghiên cứu, cũng như tại các công ty, tập đoàn hoạt động trong lĩnh vực CNTT&TT nói chung và Cyber Security nói riêng trong và ngoài nước.\n
+Sinh viên các năm cuối sẽ được hướng dẫn bởi các chuyên gia là cựu sinh viên của Trường CNTT&TT đang làm việc tại các Tập đoàn công nghệ hàng đầu như: Bkav, IBM, Thales… để vừa nâng cao kiến thức, vừa bổ sung thêm các kỹ năng làm việc chuyên nghiệp, nghiên cứu theo chuẩn quốc tế, hướng tới thị trường lao động toàn cầu, cũng như bồi đắp tinh thần đổi mới sáng tạo và khởi nghiệp.\n
+Hạ tầng phục vụ thực hành của sinh viên bao gồm hệ thống ảo hóa với các bài thực hành từ cơ bản đến nâng cao, hệ thống diễn tập ứng cứu sự cố, hệ thống thao trường huấn luyện tấn công, phòng thủ, được trang bị theo thỏa thuận hợp tác chiến lược với Tập đoàn Bkav và được đầu tư thông qua dự án KOICA IBS (Hàn Quốc). Sinh viên được trải nghiệm các công nghệ là nền tảng đảm bảo an toàn cho hệ thống thông tin của doanh nghiệp và của Chính phủ điện tử."
+
+  utter_compare_it1_it2:
+  - text: "Về ngành IT1 và IT2: \n
+ Cả 2 ngành đều đào tạo kiến thức nền tảng cơ bản và cần thiết cho thị trường lao động về CNTT trong và ngoài nước. Sinh viên theo học sẽ học chung 70% kiến thức. \n
+ Ở mức độ kiến thức chuyên sâu, ngành IT1 (Công nghệ thông tin - Khoa học máy tính) tập trung đào tạo về phần mềm, dữ liệu, thuật toán biểu diễn và xử lý dữ liệu. Sinh viên tốt nghiệp có thể trở thành chuyên gia phát triển phần mềm, chuyên gia phát triển các hệ thống thông tin, và chuyên gia thiết kế và phát triển giải pháp CNTT.\n
+ Ngành IT2 đi sâu đào tạo về cả về phần cứng, phần mềm và các kỹ thuật ghép nối tối ưu giữa phần cứng và phần mềm để tạo ra các hệ thống thông minh, hoạt động tối ưu trong các điều kiện và môi trường khác nhau, ví dụ: smart phone, các hệ thống IoT, các hệ thống nhúng thông minh (smart home, smart city)"
+
+  utter_compare_ite6_ite7:
+  - text: "IT-E6 là chương trình CNTT Việt Nhật hướng tới thị trường Nhật Bản. Em sẽ học kiến thức bằng tiếng Việt nhưng được học thêm môn tiếng Nhật để ra trường có thể đi làm ngay cho các công ty Nhật.\n
+Còn IT-E7 là chương trình CNTT global ICT, học hoàn toàn bằng tiếng Anh.\n
+- Chi tiết chương trình IT-E6: https://ts.hust.edu.vn/asset/-/asset_publisher/ddNQG1HrIiqp/content/cong-nghe-thong-tin-viet-nhat\n
+- Chi tiết chương trình IT-E7: https://ts.hust.edu.vn/asset/-/asset_publisher/ddNQG1HrIiqp/content/cong-nghe-thong-tin-global-ict"
+
+  utter_D07_co_CNTT_ko:
+  - text: "Việc khoa viện quyết định 1 ngành học xét tuyển thí sinh cần biết những kiến thức tổ hợp nào? VD: Đa số các ngành Kỹ thuật, CNTT yêu cầu tổ hợp A00 (Toán - Lý - Hóa), A01 (Toán - Lý - Anh); là để đảm bảo CHẤT LƯỢNG và SỰ LĨNH HỘI KIẾN THỨC của các em sau khi vào học các môn học (đủ kiến thức nền tảng, điểm GPA cao....)\n
+=> Do đó, các tổ hợp xét tuyển sẽ cần phải điều chỉnh lại theo từng năm tuyển sinh. Nếu chất lượng thí sinh không đảm bảo (điểm số thấp, nợ môn, học lại....), là các thí sinh ở tổ hợp nào thì khoa viện có thể điều chỉnh hoặc bỏ xét tuyển tổ hợp đó.\n
+Tổ hợp D07 là Toán - Hóa - Anh, thường sẽ phù hợp hơn với các ngành thiên về Hóa – Sinh học – Thực phẩm – Môi trường. Còn các ngành CNTT sẽ cần kiến thức Toán, Lý là chủ yếu để lĩnh hội kiến thức của nhiều môn học chuyên ngành. Do đó, các ngành đào tạo CNTT không xét tuyển bằng tổ hợp D07\n"
+
+  utter_CTDT_trien_vong:
+  - text: "kỹ sư / thạc sỹ CNTT Bách Khoa có chỗ đứng uy tín tại tập đoàn và công ty công nghệ hàng đầu Việt Nam và trên Thế giới. Vì vậy, tốt nghiệp chương trình đào tạo nào sinh viên cũng có triển vọng nghề nghiệp tốt, miễn trong quá trình học, sinh viên tập trung và tích lũy đủ kiến thức chuyên môn, kỹ năng mềm, và khả năng ngoại ngữ mà chương trình cung cấp. Sự phát triển sự nghiệp của mỗi người, đặc biệt trong lĩnh vực khoa học – kỹ thuật – công nghệ chủ yếu phụ thuộc vào năng lực của người đó.\n
+
+Trong bối cảnh toàn cầu hóa, khả năng ngoại ngữ cũng là một yếu tố rất quan trọng, do đó, theo học các chương trình Elitech, bên cạnh việc được học các lớp với sĩ số nhỏ và chú trọng học thông qua trải nghiệm thì trình độ ngoại ngữ tích lũy thông qua việc học tăng cường ngoại ngữ, cũng như học chuyên môn bằng tiếng nước ngoài, do cả người Việt và người nước ngoài giảng dạy, sinh viên sẽ có nhiều lợi thế cạnh tranh hơn khi tham gia thị trường lao động quốc tế, và làm việc tại các công ty, tập đoàn đa quốc gia.\n
+
+Sinh viên học IT-E6, IT-E7 rất nhiều em sau khi tốt nghiệp đã ra nước ngoài làm việc, hoặc học tiếp ở các bậc học cao hơn. Đặc biệt với IT-E6, khoảng 70% sinh viên sau khi tốt nghiệp sang Nhật Bản làm việc với mức lương khởi điểm rất cao, thông thường từ 3000 đến 4000 USD/tháng, cá biệt có những em có thể đạt được mức lương 6000 USD/tháng.\n"
+
+  utter_giang_vien_nuoc_ngoai:
+  - text: "Theo định hướng của Nhà trường, sinh viên thuộc các hệ Elitech, SIE sẽ được tham gia các lớp học giảng dạy bởi các giáo sư / chuyên gia nước ngoài. Tại Viện CNTT&TT việc này luôn được đảm bảo, đặc biệt với Chương trình CNTT Việt Nhật IT-E6, sinh viên được học Tiếng Nhật trực tiếp bởi người Nhật, và được tham dự các môn học được giảng dạy bằng Tiếng Nhật. Ngoài ra, năm nay Viện vừa tuyển dụng một Giáo sư người Canada, và đang thương thảo ký tiếp hợp đồng với một Giáo sư người Pháp sang làm việc toàn thời gian tại Viện để giảng dạy cho các hệ Elitech và SIE. Thêm vào đó, thông qua hợp tác và tài trợ của các tổ chức, các trường đại học, các tập đoàn (như: VinGroup), Viện CNTT&TT cũng thường xuyên mời và tiếp nhận các nhà khoa học, các chuyên gia uy tín nước ngoài sang làm việc và giảng dạy tại Viện."
+
+  utter_con_gai_cntt:
+  - text: "Lĩnh vực CNTT&TT không phân biệt nam nữ. Có rất nhiều nhân vật quyền lực, nổi tiếng về CNTT&TT trên thế giới là nữ như Sheryl Sandberg, CEO Facebook, Maryssa Mayer cựu CEO Yahoo,..\n
+
+Có rất nhiều vị trí nghề nghiệp trong lĩnh vực CNTT&TT phù hợp với phái nữ như thiết kế lập trình Web, kiểm thử phần mềm, quản trị cơ sở dữ liệu, đảm bảo chất lượng phần mềm, quản trị CNTT, kỹ sư cầu nối CNTT..\n
+
+Thực tế tuyển sinh tại trường những năm qua cho thấy số lượng sinh viên nữ học tại Viện ngày một tăng. Kết quả học tập của các nữ sinh viên nữ cũng thường tốt hơn các bạn nam.\n"
+
+  utter_yeu_cau_ngoai_ngu:
+  - text: "Chương trình Công nghệ thông tin Việt Nhật cho phép các bạn chưa biết tiếng Nhật có thể theo học tiếng Nhật từ đầu. Các môn học chuyên môn được giảng dạy bằng tiếng Việt, do đó người học không cần phải biết tiếng Nhật trước khi nhập học.\n
+
+Các bạn đã biết tiếng Nhật thì tùy vào trình độ mà có thể được miễn một số môn tiếng Nhật tùy theo trình độ của các bạn (được các thầy cô bộ môn tiếng Nhật kiểm tra đánh giá)\n
+
+Với các Chương trình Global ICT, và Khoa học dữ liệu và Trí tuệ nhân tạo (DS-AI) toàn bộ các môn học về chuyên môn được giảng dạy bằng tiếng Anh. Vì vậy có tiếng Anh tốt sẽ thuận lợi cho sinh viên tiếp thu kiến thức. Nếu tiếng Anh chưa tốt bạn được học tăng cường tiếng Anh trong năm thứ nhất trước khi vào các môn chuyên môn trong năm thứ 2.\n"
+
+  utter_so_sanh_cttt:
+  - text: "các chương trình đào tạo Elitech hướng đến cung cấp nguồn nhân lực cho thị trường lao động quốc tế, nên yếu tố ngoại ngữ: Tiếng Anh, Tiếng Pháp, và Tiếng Nhật được coi trọng bên cạnh kiến thức chuyên môn hiện đại và cập nhật cần có.\n
+
+Theo chính sách của Nhà trường và Viện trong nâng cao hiệu quả đào tạo, các chương trình đào tạo trong cùng một ngành được xây dựng dựa trên các nền tảng kiến thức chung, để từ đó đơn vị phụ trách chuyên môn và giảng viên có điều kiện tập trung nâng cao chất lượng của các môn học (thành phần cấu tạo nên chương trình học). Chính vì vậy, các chương trình IT-E6, IT-E7, IT-E10 thuộc ngành Công nghệ Thông tin sẽ có chương trình được thiết kế khá tương tự nhau, và sự khác biệt chính đến từ yếu tố ngôn ngữ, cũng như việc mời giảng viên/chuyên gia nước ngoài đến từ các nước với ngôn ngữ phù hợp tham gia giảng dạy cho sinh viên.\n"
+
+  utter_lap_trinh:
+  - text: "Do việc hướng nghiệp ở bậc phổ thông chưa được tốt, nên sinh viên hay có câu hỏi, học ngành nào/chương trình nào thì học về lập trình? hay muốn làm web, làm game thì học ngành nào? Câu trả lời chung thì tất cả các ngành/chương trình của Viện đều phải học rất kỹ về lập trình, kỹ thuật lập trình, ngôn ngữ lập trình, và… hơn thế nữa. Mà sản phẩm đầu ra của lập trình là phần mềm, dù đó có là phần mềm triển khai trên máy chủ, máy tính, điện thoại, hệ nhúng… Web hay game thì cũng là các phần mềm, và học ngành nào thì cũng đều có khả năng tạo ra các phần mềm đó, và… hơn thế nữa. 
+"
+
+  utter_layoff:
+  - text: "Nguyên nhân của làn sóng layoff nhân sự diễn ra tại các tập đoàn công nghệ lớn trên thế giới bắt nguồn từ việc trong giai đoạn diễn ra dịch Covid, các tập toàn này đã tuyển dụng nhân sự với quy mô cực lớn. Sau khi dịch bệnh kết thúc, các công ty cần điều chỉnh lại cơ cấu nhân sự để phù hợp với tình hình mới, nên cắt giảm nhân sự. Tuy nhiên số lượng nhân sự sau khi cắt giảm vẫn lớn hơn giai đoạn trước khi xảy ra đại dịch và các nhân sự bị sa thải từ các công ty này sau đó vẫn tìm được việc làm tại các công ty khác (nguồn: Ngành IT vẫn HOT dù đứng giữa “tâm bão” suy thoái kinh tế). Có thể nói đây là một hoạt động điều chỉnh nhân sự có tính thời điểm chứ không phải là một xu thế dài hạn của ngành CNTT. Riêng ở Việt Nam, thị trường nhân lực CNTT không bị ảnh hưởng nhiều trong giai đoạn vừa qua và nhu cầu nhân lực trong lĩnh vực này vẫn cao trong thời gian tới (nguồn:Nhu cầu nhân lực ngành Công nghệ thông tin tăng trong nhiều năm tới; Nhân sự công nghệ không lo thiếu việc – Báo Người lao động)
+"
+
+  utter_GPT_AI:
+  - text: "Đúng là công cụ AI tạo sinh như ChatGPT hiện nay đã có khả năng tự động viết mã nguồn với chất lượng tương đương, thậm chí tốt hơn con người đối với một số bài toán. Đối với các lập trình viên chỉ có năng lực thực hiện các công việc lập trình cơ bản, đơn giản và lặp đi lặp lại, khả năng bị thay thế là có. Tuy nhiên, các hệ thống này chưa có khả năng tự viết mã nguồn cho các bài toán mới, xây dựng những hệ thống phức tạp đòi hỏi tính sáng tạo, tư duy hệ thống của các kỹ sư, cử nhân CNTT. Cơ chế hoạt động của các công cụ này dựa trên việc “học” cách lập trình của con người từ một lượng dữ liệu khổng lồ các mã nguồn đã được tạo ra trước đó. Sinh viên theo học các chương trình đào tạo tại trường CNTT&TT sẽ được trang bị kiến thức nền tảng ngành vững chắc, được tiếp cận với các kiến thức chuyên ngành thường xuyên được cập nhật, được học cách tư duy để có thể xây dựng, thiết kế các giải pháp công nghệ cho các bài toán mới, phức tạp nảy sinh trong thực tiễn. Sắp tới, các sinh viên cũng sẽ được học cách sử dụng, khai thác các công cụ như ChatGPT để trở thành những nhân lực CNTT chất lượng cao, đáp ứng yêu cầu của lĩnh vực nghề nghiệp này trong tương lai."  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

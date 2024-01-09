@@ -1,0 +1,278 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - chào
+    - xin chào
+    - hello
+    - alo
+    - chào buổi sáng
+    - chào buổi tôi
+    - chào đằng ấy
+    - hey 
+    - yeah
+    - chào bạn
+    - chào anh
+    - chào chị
+    - chào cả nhà
+    - a lô
+    - a lô ha
+    - heyo
+    - hey
+
+
+- intent: goodbye
+  examples: |
+    - ok
+    - tạm biệt
+    - hẹn gặp lại
+    - chúc ngủ ngon
+    - bye
+    - goodbye
+    - chúc ngày mới
+    - bai bai
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_about_general
+  examples: |
+    - Ngành công nghệ thông tin bách khoa hà nội
+    - Ngành công nghệ thông tin
+    - Ngành IT
+    - Ngành học về máy tính
+    - Học về máy tính
+    - Công nghệ thông tin
+    - Thông tin chung
+    - Học công nghệ thông tin
+    - Tôi muốn biết thông tin về ngành công nghệ thông tin
+    - Bách khoa Hà Nội có mấy ngành giảng dạy công nghệ thông tin
+    
+- intent: ask_about_IT1
+  examples: |
+    - Ngành [Khoa Học Máy Tính]{"entity": "nganh_it1"}
+    - [IT1]{"entity": "nganh_it1"}
+    - Khoa học máy tính
+    - Ngành IT1
+    - [Khoa học máy tính IT1]{"entity": "nganh_it1"}
+    - Tôi muốn hỏi thông tin về ngành IT1
+    - Đại học Bách Khoa khoa Khoa học Máy tính IT1
+    - [Computer Science]{"entity": "nganh_it1"}  
+    - [it1]{"entity": "nganh_it1"}
+
+- intent: ask_about_IT2
+  examples: |
+    - Ngành [it2]{"entity": "nganh_it2"}
+    - [kỹ thuật máy tính]{"entity": "nganh_it2"}
+    - [kỹ thuật máy tính IT2]{"entity": "nganh_it2"}
+    - Ngành [IT2]{"entity": "nganh_it2"}
+    - Tôi muốn hỏi thông tin về [ngành IT2]{"entity": "nganh_it2"}
+    - Đại học Bách Khoa khoa Kỹ thuật Máy tính IT2
+    - [it2]{"entity": "nganh_it2"}
+    - [computer engineering]{"entity": "nganh_it2"}
+
+- intent: ask_about_ITe7
+  examples: |
+    - [it-e7]{"entity": "nganh_e7"}
+    - ngành [it-e7]{"entity": "nganh_e7"}
+    - ngành công nghệ thông tin chương trình tiên tiến [it-e7]{"entity": "nganh_e7"}
+    - ngành công nghệ thông tin [Global Ict]{"entity": "nganh_e7"}
+    - ngành [công nghệ thông tin học bằng tiếng anh]{"entity": "nganh_e7"} 
+    - [ite7]{"entity": "nganh_e7"}
+    - [ict]{"entity": "nganh_e7"}
+
+- intent: ask_about_ITe6
+  examples: |
+    - [it-e6]{"entity": "nganh_e6"}
+    - ngành [it-e6]{"entity": "nganh_e6"}
+    - ngành công nghệ thông tin chương trình tiên tiến [it-e6]{"entity": "nganh_e6"}
+    - ngành [công nghệ thông tin Việt Nhật]{"entity": "nganh_e6"}
+    - ngành [công nghệ thông tin học bằng tiếng Nhật]{"entity": "nganh_e6"} 
+    - [ite6]{"entity": "nganh_e6"}
+    - [Việt Nhật]{"entity": "nganh_e6"}
+    - [học bằng tiếng Nhật]{"entity": "nganh_e6"}
+    - [hedspi]{"entity": "nganh_e6"}
+
+- intent: ask_about_ITe10
+  examples: |
+    - [it-e10]{"entity": "nganh_e10"}
+    - ngành [it-e10]{"entity": "nganh_e10"}
+    - ngành công nghệ thông tin [chương trình tiên tiến it-e10]{"entity": "nganh_e10"}
+    - ngành [công nghệ thông tin AI]{"entity": "nganh_e10"}
+    - ngành [công nghệ thông tin học trí tuệ nhân tạo]{"entity": "nganh_e10"}
+    - [ite10]{"entity": "nganh_e10"}
+    - [AI]{"entity": "nganh_e10"}
+    - [Trí tuệ nhân tạo]{"entity": "nganh_e10"}
+    - [Khoa học dữ liệu]{"entity": "nganh_e10"}
+    - [Khoa học dữ liệu và trí tuệ nhân tạo]{"entity": "nganh_e10"}
+    - [DS_AI]{"entity": "nganh_e10"}
+    - Học Trí tuệ nhân tạo thì học chương trình nào?
+
+- intent: ask_about_ITe15
+  examples: |
+    - [it-e15]{"entity": "nganh_e15"}
+    - ngành [it-e15]{"entity": "nganh_e15"}
+    - ngành công nghệ thông tin [chương trình tiên tiến it-e15]{"entity": "nganh_e15"}
+    - ngành [công nghệ thông tin học về an toàn thông tin]{"entity": "nganh_e15"}
+    - ngành [an toàn thông tin]{"entity": "nganh_e15"}
+    - [cyber security]{"entity": "nganh_e15"}
+    - [an toàn không gian số]{"entity": "nganh_e15"}
+    - [ite15]{"entity": "nganh_e15"}
+    
+- intent: compare_it1_it2
+  examples: |
+    - so sánh it1 với it2
+    - it1 vs it2
+    - it1 và it2 cái nào tốt hơn?
+    - it1 và it2
+    - it1, it2
+    - phân vân giữa ngành IT1 và IT2
+    - it1 và it2 khác nhau những gì?
+
+- intent: compare_ite6_ite7
+  examples: |
+    - so sánh ite6 với ite7
+    - ite6 và ite7 cái nào tốt hơn?
+    - ite6 vs ite7
+    - ite6, ite7
+    - phân vân giữa ngành ITe6 và ITe7
+    - ite6 và ite7 khác nhau những gì
+
+- intent: D07_co_CNTT_ko
+  examples: |
+    - D07 có CNTT không ?
+    - Khối D07 có CNTT không?
+    - Học D07 có vào được IT bách khoa không?
+    
+- intent: CTDT_trien_vong
+  examples: |
+    - Học chương trình đào tạo nào sẽ có triển vọng nghề nghiệp tốt nhất?
+    - Học ngành gì sẽ có triển vọng nghề nghiệp tốt nhất?
+    - Học gì tốt nhất?
+    - Học chương trình nào ra làm ổn nhất?
+
+- intent: giang_vien_nuoc_ngoai
+  examples: |
+    - Có sự tham gia giảng dạy của giáo sư / chuyên gia nước ngoài khi trong các chương trình đào tạo thuộc hệ Elitech hay SIE của Viện CNTT&TT hay không?
+    - Đào tạo Elitech có được giảng dạy bởi người nước ngoài không?
+    - Đào tạo Elitech có được giảng dạy bởi thầy cô nước ngoài không?
+    - Có được học thầy cô nước ngoài ở elitech không?
+    - elitech có được giảng dạy bởi thầy cô nước ngoài không? 
+    
+- intent: con_gai_cntt
+  examples: |
+    - Con gái có phù hợp học lĩnh vực CNTT&TT hay không?
+    - CNTT có dành cho nữ không?
+    - IT dành cho phụ nữ không?
+    - Con gái học IT được không?
+    - it dành cho con gái không?
+    - con gái?
+    - con gái và it
+    - con gái và công nghệ thông tin
+    - con gái và cntt
+    - con gái vs it
+
+- intent: yeu_cau_ngoai_ngu
+  examples: |
+    - Yêu cầu về ngoại ngữ khi đăng ký vào các chương trình đào tạo tiên tiến như thế nào?
+    - Muốn đăng ký vào chương trình CNTT Việt Nhật có cần biết tiếng Nhật trước hay không?
+    - Đăng ký vào chương trình ICT và DS-AI có cần giỏi tiếng Anh?
+    - Ngoại ngữ?
+    - Yêu cầu ngoại ngữ?
+    - Tiếng anh đầu vào?
+    - Yêu cầu đầu vào về tiếng anh
+    - Tiếng nhật đầu vào
+    - Yêu cầu tiếng nhật đầu vào
+
+- intent: so_sanh_cttt
+  examples: |
+    - IT-E6, IT-E7, IT-E10 có lựa chọn ngôn ngữ khác nhau, vậy nội dung chương trình đào tạo có khác nhau không?
+    - ite6, ite7, ite10 có khác nhau không?
+    - cntt elitech khác nhau điểm gì?
+    - it các chương trình tiên tiến khác nhau chỗ nào?
+    - các chương trình tiên tiến có khác nhau không?
+
+- intent: lap_trinh
+  examples: |
+    - Học lập trình thì học ngành/chương trình nào?
+    - Muốn làm web, làm game thì học ngành/chương trình nào?
+
+- intent: layoff
+  examples: |
+    - layoff
+    - Làn sóng sa thải (layoff) nhân sự tại các tập đoàn, công ty công nghệ lớn diễn ra trong thời gian vừa qua liệu có ảnh hưởng tới thị trường việc làm, cơ hội phát triển nghề nghiệp trong lĩnh vực CNTT?
+    - sợ không kiếm được việc
+    - sợ thất nghiệp
+    - sợ bị đuổi việc
+    - đuổi việc
+    - cơ hội phát triển của ngành trong đợt layoff
+    - tiềm năng của ngành trong đợt layoff
+    - thời kỳ suy thoái kinh tế
+
+- intent: GPT_AI
+  examples: |
+    - Liệu sự ra đời và phát triển của các công cụ trí tuệ nhân tạo (AI) như ChatGPT có khiến các sinh viên CNTT, lập trình viên thất nghiệp trong thời gian tới?
+    - GPT_AI
+    - Thất nghiệp do AI
+    - AI/GPT lấy mấy cơ hội việc làm
+    - sợ không có việc gì AI

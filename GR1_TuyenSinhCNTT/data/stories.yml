@@ -1,0 +1,132 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: about general
+  steps:
+  - intent: ask_about_general
+  - action: utter_ask_about_general
+  - intent: ask_about_IT1
+  - action: utter_ask_about_IT1
+  - intent: ask_about_IT2
+  - action: utter_ask_about_IT2
+  - intent: ask_about_ITe7
+  - action: utter_ask_about_ITe7
+  - intent: ask_about_ITe6
+  - action: utter_ask_about_ITe6
+  - intent: ask_about_ITe10
+  - action: utter_ask_about_ITe10
+  - intent: ask_about_ITe15
+  - action: utter_ask_about_ITe15
+
+- story: about it1
+  steps:
+  - intent: ask_about_IT1
+  - action: utter_ask_about_IT1
+
+- story: about it2
+  steps:
+  - intent: ask_about_IT2
+  - action: utter_ask_about_IT2
+
+- story: about ite7
+  steps:
+  - intent: ask_about_ITe7
+  - action: utter_ask_about_ITe7
+
+- story: about ite6
+  steps:
+  - intent: ask_about_ITe6
+  - action: utter_ask_about_ITe6
+
+- story: about ite10
+  steps:
+  - intent: ask_about_ITe10
+  - action: utter_ask_about_ITe10
+
+- story: about ite15
+  steps:
+  - intent: ask_about_ITe15
+  - action: utter_ask_about_ITe15
+
+- story: compare it1 it2
+  steps:
+  - intent: compare_it1_it2
+  - action: utter_compare_it1_it2
+
+- story: compare ite6 ite7
+  steps:
+  - intent: compare_ite6_ite7
+  - action: utter_compare_ite6_ite7
+
+- story: D07 co CNTT ko
+  steps:
+  - intent: D07_co_CNTT_ko
+  - action: utter_D07_co_CNTT_ko
+
+- story: CTDT trien vong
+  steps:
+  - intent: CTDT_trien_vong
+  - action: utter_CTDT_trien_vong
+
+- story: giang vien nuoc ngoai
+  steps:
+  - intent: giang_vien_nuoc_ngoai
+  - action: utter_giang_vien_nuoc_ngoai
+
+- story: con gai cntt
+  steps:
+  - intent: con_gai_cntt
+  - action: utter_con_gai_cntt
+
+- story: yeu cau ngoai ngu
+  steps:
+  - intent: yeu_cau_ngoai_ngu
+  - action: utter_yeu_cau_ngoai_ngu
+
+- story: so sanh cttt
+  steps:
+  - intent: so_sanh_cttt
+  - action: utter_so_sanh_cttt
+
+- story: lap trinh
+  steps:
+  - intent: lap_trinh
+  - action: utter_lap_trinh
+
+- story: layoff
+  steps:
+  - intent: layoff
+  - action: utter_layoff
+
+- story: GPT AI
+  steps:
+  - intent: GPT_AI
+  - action: utter_GPT_AI
